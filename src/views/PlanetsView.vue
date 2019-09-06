@@ -1,7 +1,9 @@
 <template lang="html">
+<div class="">
   <PlanetFacts :planet="selectedPlanet"/>
   <SolarSystemFacts />
   <PlanetLeaflet />
+</div>
 </template>
 
 <script>
