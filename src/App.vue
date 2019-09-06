@@ -1,12 +1,12 @@
 <template lang="html">
   <div id="app">
-    <Header :planets="planets"/>
+    <CCGHeader :planets="planets"/>
     <router-view />
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header';
+import CCGHeader from '@/components/CCGHeader';
 
 export default {
   name: 'app',
@@ -16,7 +16,7 @@ export default {
     }
   },
   components: {
-    Header
+    CCGHeader
   },
   mounted() {
     this.fetchData();
