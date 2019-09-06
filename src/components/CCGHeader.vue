@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="header">
+  <div id="nav-header">
     <h1>CCG</h1>
     <h6>CodeClan Glasgow</h6>
     <div id="nav">
@@ -14,7 +14,7 @@
 import PlanetsList from '@/components/PlanetsList';
 
 export default {
-  name: "header",
+  name: "ccg-header",
   props: ["planets"],
   components: {
     PlanetsList
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-#header{
+#nav-header{
   display: flex;
   flex-direction: column;
 }
