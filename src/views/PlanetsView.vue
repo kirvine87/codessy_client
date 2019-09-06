@@ -21,7 +21,9 @@ export default {
     PlanetLeaflet
   },
   mounted() {
-    eventBus.$on('planet-selected')
+    eventBus.$on('planet-selected', (planet) => {
+      planet = this.selectedPlanet
+    })
   }
 }
 </script>
