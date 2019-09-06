@@ -2,7 +2,7 @@
 <div class="">
   <PlanetFacts :planet="selectedPlanet"/>
   <SolarSystemFacts />
-  <PlanetLeaflet />
+  <!-- <PlanetLeaflet /> -->
 </div>
 </template>
 
