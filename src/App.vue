@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     fetchData() {
-      fetch("https://localhost:3000/api/planets")
+      fetch("http://localhost:3000/api/planets")
       .then(res => res.json())
       .then(planets => this.planets = planets)
     }
