@@ -13,7 +13,7 @@ const router = new Router({
       name: 'planets-view',
       component: PlanetsView
     }
-  ];
+  ]
 });
 
 export default router;
