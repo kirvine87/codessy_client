@@ -3,7 +3,7 @@
     <h1>CCG</h1>
     <h6>CodeClan Glasgow</h6>
     <div id="nav">
-      <router-link :to="{ name: 'planets-view'}"></router-link>
+      <router-link :to="{ name: 'planets-view'}">Home</router-link>
       <h3>Quiz</h3>
     </div>
     <PlanetsList :planets="planets" />
