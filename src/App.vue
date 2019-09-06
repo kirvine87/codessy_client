@@ -1,13 +1,12 @@
 <template lang="html">
   <div id="app">
     <Header :planets="planets"/>
-    <PlanetsView />
+    <router-view />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header';
-import PlanetsView from '@/views/PlanetsView';
 
 export default {
   name: 'app',
@@ -17,8 +16,7 @@ export default {
     }
   },
   components: {
-    Header,
-    PlanetsView
+    Header
   },
   mounted() {
     this.fetchData();
