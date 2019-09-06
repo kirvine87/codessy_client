@@ -7,13 +7,15 @@
 <script>
 import PlanetFacts from '@/components/PlanetFacts';
 import SolarSystemFacts from '@/components/SolarSystemFacts';
-import PlanetLeaflet from '@/components/PlanetLeaflet'
-import {eventBus} from '@/main.js'
+import PlanetLeaflet from '@/components/PlanetLeaflet';
+import {eventBus} from '@/main.js';
 
 export default {
-  name: 'planets-view'
+  name: 'planets-view',
   data() {
-    selectedPlanet: null
+    return {
+      selectedPlanet: null
+    }
   },
   components: {
     PlanetFacts,
