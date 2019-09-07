@@ -17,6 +17,11 @@ export default {
 img{
   height: 18em;
   width: 95%;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+h1{
+  margin-top: 0;
 }
 
 .image {
