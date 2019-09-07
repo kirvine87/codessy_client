@@ -4,7 +4,7 @@
     <h6>CodeClan Glasgow</h6>
     <div id="nav">
       <router-link :to="{ name: 'planets-view'}">Home</router-link>
-      <h3>Quiz</h3>
+      <router-link :to="{ name: 'planets-quiz-view'}">Quiz</router-link>
     </div>
     <PlanetsList :planets="planets" />
   </div>
