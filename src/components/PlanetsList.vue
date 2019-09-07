@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="planet">
+    <h3 @click="handleSolarClick">Solar System</h3>
     <h3 @click="handlePlanetClick(planet)" :key="index" v-for="(planet, index) in planets">{{planet.name}}</h3>
   </div>
 </template>
@@ -13,6 +14,9 @@ export default {
   methods: {
     handlePlanetClick(planet) {
       eventBus.$emit('planet-selected', planet)
+    },
+    handleSolarClick() {
+      eventBus.$emit('planet-selected', null)
     }
   }
 }
