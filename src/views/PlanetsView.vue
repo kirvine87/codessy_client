@@ -1,12 +1,12 @@
 <template lang="html">
-<div id="planets-view">
-  <PlanetLeaflet />
-  <div id="facts">
-    <PlanetFacts v-if="selectedPlanet" :planet="selectedPlanet"/>
-    <SolarSystemFacts v-if="!selectedPlanet" />
-  </div>
+  <div id="planets-view">
+    <PlanetLeaflet />
+    <div id="facts">
+      <PlanetFacts v-if="selectedPlanet" :planet="selectedPlanet"/>
+      <SolarSystemFacts v-if="!selectedPlanet" />
+    </div>
 
-</div>
+  </div>
 </template>
 
 <script>
@@ -29,8 +29,11 @@ export default {
   },
   mounted() {
     eventBus.$on('planet-selected', (planet) => {
-      this.selectedPlanet = planet 
+      this.selectedPlanet = planet
     })
+  },
+  updated() {
+    
   }
 }
 </script>
