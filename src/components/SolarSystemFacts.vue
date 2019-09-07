@@ -1,5 +1,6 @@
 <template lang="html">
-  <div id="solarSystemFacts">
+
+  <div id="container">
     <h1>Facts about our solar system</h1>
     <div class="facts">
       <div class="card">
@@ -12,70 +13,38 @@
       </div>
 
       <div class="card">
-        Age: 4.6 Billion Years
+        <h3>Age:</h3>
+        <p>4.6 Billion Years</p>
       </div>
 
       <div class="card">
-        Number of Planets: 8
+        <h3>Number of Planets:</h3>
+        <p>8</p>
       </div>
 
       <div class="card">
-        Number of Moons: 181
+        <h3>Number of Moons:</h3>
+        <p>181</p>
       </div>
 
       <div class="card">
-        Number of Asteroids: 552,894
+        <h3>Number of Asteroids:</h3>
+        <p>552,894</p>
       </div>
 
       <div class="card">
-        Number of Comets: 3,083
+        <h3>Number of Comets:</h3>
+        <p>3,083</p>
       </div>
 
       <div class="card">
-        Diameter: 18.75 trillion km (11.65 trillion miles)
-      </div>
-
-    </div>
-
-    <div class="">
-      <h3>Order in distance from the sun:</h3>
-
-      <div class="card">
-        <p>Mercury</p>
+        <h3>Diameter:</h3>
+        <p>18.75 trillion km (11.65 trillion miles)</p>
       </div>
 
       <div class="card">
-        <p>Venus</p>
+        <p>Planets located in both the inner and outer solar system.</p>
       </div>
-
-      <div class="card">
-        <p>Earth</p>
-      </div>
-
-      <div class="card">
-        <p>Mars</p>
-      </div>
-
-      <div class="card">
-        <p>Jupiter</p>
-      </div>
-
-      <div class="card">
-        <p>Saturn</p>
-      </div>
-
-      <div class="card">
-        <p>Uranus</p>
-      </div>
-
-      <div class="card">
-        <p>Neptune</p>
-      </div>
-
-    </div>
-
-    <div class="card">
-      <p>Planets located in both the inner and outer solar system.</p>
     </div>
 
     <div>
@@ -90,48 +59,53 @@
         <h3>The Outer Solar System</h3>
         <p>The outer solar system is the region made up of the giant planets Jupiter, Saturn, Uranus and Neptune ands their moons. The centaurs and many short-period comets also orbit this region.
           Due to their greater distance from the sun, the objects in the outer solar system contain a higher proportion of volatiles, such as water, ammonia and methane than the inner planets.
-          These components remain solid due to the lower temperatures of the planets being further from the sun. </p>
-        </div>
-
+          These components remain solid due to the lower temperatures of the planets being further from the sun.
+        </p>
       </div>
     </div>
-  </template>
+  </div>
 
-  <script>
-  export default {
-    name: "solar-system-facts"
-  }
-  </script>
+</template>
 
-  <style lang="css" scoped>
+<script>
+export default {
+  name: "solar-system-facts"
+}
+</script>
 
-    div {
-      display: flex;
-      flex-flow: row wrap;
-    }
+<style lang="css" scoped>
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      background-color: rgba(126, 70, 154, 0.6);
-      border: 1px solid black;
-      margin-right: 20px;
-      width: 300px;
-      height: 150px;
-    }
+.facts {
+  display: flex;
+  flex-flow: row wrap;
+}
 
-    .container {
-      display: flex;
-      flex-flow: column;
-    }
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(126, 70, 154, 0.6);
+  border: 1px solid black;
+  margin-right: 20px;
+  width: 300px;
+  height: 150px;
+  border-radius: 10%;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-    h3 {
-      font-size: 20px;
-    }
+#container {
+  display: flex;
+  flex-flow: column;
+}
 
-    p {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    
-  </style>
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+</style>
