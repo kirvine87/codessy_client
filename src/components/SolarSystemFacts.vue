@@ -22,15 +22,18 @@
       The four planets within this region have dense, rocky compositions, few or no moons and no ring systems. Venus, Earth and Mars have atmospheres that are able to generate weather.
       They also have impact craters and tectonic surface features, such as rift valleys and volcanoes.
       Mercury and Venus are also known as inferior planets because they are closer to the sun than Earth. </p>
-    
-    </div>
-  </template>
+      <h3>The Outer Solar System</h3>
+      <p>The outer solar system is the region made up of the giant planets Jupiter, Saturn, Uranus and Neptune ands their moons. The centaurs and many short-period moments also orbit this region.
+        Due to their greater distance from the sun, the objects in the outer solar system contain a higher proportion of volatiles, such as water, ammonia and methane than the inner planets.
+        These components remain solid due to the lower temperatures of the planets being further from the sun. </p>
+      </div>
+    </template>
 
-  <script>
-  export default {
-    name: "solar-system-facts"
-  }
-  </script>
+    <script>
+    export default {
+      name: "solar-system-facts"
+    }
+    </script>
 
-  <style lang="css" scoped>
-  </style>
+    <style lang="css" scoped>
+    </style>
