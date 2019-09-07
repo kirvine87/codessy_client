@@ -12,27 +12,33 @@
       </div>
 
       <div class="card">
-        Age: 4.6 Billion Years
+        <h3>Age:</h3>
+        <p>4.6 Billion Years</p>
       </div>
 
       <div class="card">
-        Number of Planets: 8
+        <h3>Number of Planets:</h3>
+        <p>8</p>
       </div>
 
       <div class="card">
-        Number of Moons: 181
+        <h3>Number of Moons:</h3>
+          <p>181</p>
       </div>
 
       <div class="card">
-        Number of Asteroids: 552,894
+        <h3>Number of Asteroids:</h3>
+        <p>552,894</p>
       </div>
 
       <div class="card">
-        Number of Comets: 3,083
+        <h3>Number of Comets:</h3>
+        <p>3,083</p>
       </div>
 
       <div class="card">
-        Diameter: 18.75 trillion km (11.65 trillion miles)
+        <h3>Diameter:</h3>
+        <p>18.75 trillion km (11.65 trillion miles)</p>
       </div>
 
     </div>
@@ -133,5 +139,5 @@
       font-size: 20px;
       font-weight: bold;
     }
-    
+
   </style>
