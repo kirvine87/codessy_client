@@ -56,12 +56,12 @@ export default {
   flex-direction: row;
   padding: 0 1em 0 1em;
   height: 95vh;
-  border: green 1px solid;
 }
 
 #ccg-header{
   width: 10%;
   padding: 1em;
+  border-right: white 1px solid;
 }
 
 #main{
