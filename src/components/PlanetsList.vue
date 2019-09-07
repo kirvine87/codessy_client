@@ -19,4 +19,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+h3{
+  color: white;
+  font-size: 1.5em;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+h3:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 </style>
