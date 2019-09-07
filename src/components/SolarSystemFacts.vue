@@ -1,5 +1,6 @@
 <template lang="html">
-  <div id="solarSystemFacts">
+
+  <div id="container">
     <h1>Facts about our solar system</h1>
     <div class="facts">
       <div class="card">
@@ -74,7 +75,7 @@ export default {
 
 <style lang="css" scoped>
 
-div {
+.facts {
   display: flex;
   flex-flow: row wrap;
 }
@@ -93,7 +94,7 @@ div {
   padding-right: 20px;
 }
 
-.container {
+#container {
   display: flex;
   flex-flow: column;
 }
