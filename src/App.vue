@@ -54,8 +54,8 @@ export default {
 #app{
   display: flex;
   flex-direction: row;
-  padding: 1em;
-  height: 90vh;
+  padding: 0 1em 0 1em;
+  height: 95vh;
   border: green 1px solid;
 }
 
@@ -67,6 +67,7 @@ export default {
 #main{
   margin: 0 auto;
   padding: 1em;
+  width: 100%;
 }
 
 h3{

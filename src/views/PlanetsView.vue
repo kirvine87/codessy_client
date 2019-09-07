@@ -1,8 +1,8 @@
 <template lang="html">
-<div class="">
+<div id="planets-view">
+  <PlanetLeaflet />
   <PlanetFacts :planet="selectedPlanet"/>
   <SolarSystemFacts />
-  <!-- <PlanetLeaflet /> -->
 </div>
 </template>
 
@@ -33,4 +33,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#planets-view{
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+  border: 1px solid blue;
+}
 </style>
