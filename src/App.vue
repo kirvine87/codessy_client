@@ -54,19 +54,20 @@ export default {
 #app{
   display: flex;
   flex-direction: row;
-  padding: 1em;
-  height: 90vh;
-  border: green 1px solid;
+  padding: 0 1em 0 1em;
+  height: 95vh;
 }
 
 #ccg-header{
   width: 10%;
   padding: 1em;
+  border-right: white 1px solid;
 }
 
 #main{
   margin: 0 auto;
   padding: 1em;
+  width: 100%;
 }
 
 h3{

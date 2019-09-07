@@ -26,10 +26,34 @@ export default {
 #nav-header{
   display: flex;
   flex-direction: column;
+  flex:1;
 }
 
 #nav{
   display: flex;
   flex-direction: column;
 }
+
+h1, h6{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h6{
+  border-bottom: 1px solid white;
+  margin-bottom: 5em;
+}
+
+h3, a{
+  color: white;
+  font-size: 1.5em;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+h3:hover, a:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 </style>

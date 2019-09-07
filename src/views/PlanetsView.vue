@@ -1,8 +1,11 @@
 <template lang="html">
-<div class="">
-  <PlanetFacts :planet="selectedPlanet"/>
-  <SolarSystemFacts v-if="!selectedPlanet" />
-  <!-- <PlanetLeaflet /> -->
+<div id="planets-view">
+  <PlanetLeaflet />
+  <div id="facts">
+    <PlanetFacts v-if="selectedPlanet" :planet="selectedPlanet"/>
+    <SolarSystemFacts v-if="!selectedPlanet" />
+  </div>
+
 </div>
 </template>
 
@@ -33,4 +36,17 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#planets-view{
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+}
+
+#facts{
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 1em;
+  height: 20em;
+  overflow-y: scroll;
+}
 </style>
