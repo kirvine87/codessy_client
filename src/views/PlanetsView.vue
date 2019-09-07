@@ -29,7 +29,7 @@ export default {
   },
   mounted() {
     eventBus.$on('planet-selected', (planet) => {
-      planet = this.selectedPlanet
+      this.selectedPlanet = planet 
     })
   }
 }
