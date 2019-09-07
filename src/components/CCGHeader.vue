@@ -3,7 +3,7 @@
     <h1>CCG</h1>
     <h6>CodeClan Glasgow</h6>
     <div id="nav">
-      <router-link :to="{ name: 'planets-view'}">Home</router-link>
+      <router-link v-on:click.native="handleHomeClick" :to="{ name: 'planets-view'}">Home</router-link>
       <router-link :to="{ name: 'planets-quiz-view'}">Quiz</router-link>
     </div>
     <PlanetsList :planets="planets" />
@@ -12,10 +12,16 @@
 
 <script>
 import PlanetsList from '@/components/PlanetsList';
+import {eventBus} from  '@/main.js'
 
 export default {
   name: "ccg-header",
   props: ["planets"],
+  methods: {
+    handleHomeClick() {
+      eventBus.$emit('planet-selected', null)
+    }
+  },
   components: {
     PlanetsList
   }
