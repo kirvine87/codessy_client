@@ -33,7 +33,7 @@ export default {
     })
   },
   updated() {
-    
+
   }
 }
 </script>
@@ -42,14 +42,13 @@ export default {
 #planets-view{
   display: flex;
   flex-direction: column;
-  flex: 100%;
+  height: 90vh;
 }
 
 #facts{
   border: 1px solid white;
   border-radius: 8px;
   padding: 1em;
-  height: 20em;
   overflow-y: scroll;
 }
 </style>
