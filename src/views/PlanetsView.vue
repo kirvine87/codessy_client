@@ -1,7 +1,7 @@
 <template lang="html">
 <div class="">
   <PlanetFacts :planet="selectedPlanet"/>
-  <SolarSystemFacts />
+  <SolarSystemFacts v-if="!selectedPlanet" />
   <!-- <PlanetLeaflet /> -->
 </div>
 </template>
