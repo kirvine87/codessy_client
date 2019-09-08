@@ -23,6 +23,15 @@
       </div>
 
       <div class="card">
+        <h3>Number of Dwarf Planets:</h3>
+        <p>5</p>
+      </div>
+
+      <div class="card">
+        <p>All planets orbit the sun</p>
+      </div>
+
+      <div class="card">
         <h3>Number of Moons:</h3>
         <p>181</p>
       </div>
