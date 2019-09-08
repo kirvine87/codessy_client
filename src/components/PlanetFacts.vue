@@ -38,6 +38,10 @@ div {
   margin-right: 20px;
   width: 250px;
   height: 150px;
+  border-radius: 10%;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .container {
   display: flex;
