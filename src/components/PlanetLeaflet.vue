@@ -7,6 +7,7 @@
         <l-image-overlay :url="url" :bounds="bounds"/>
 
         <l-marker v-for="planet in planets" :lat-lng="planet" :key="planet.name">
+          <l-icon :icon-url="rocketIcon" />
           <l-popup :content="planet.name" />
         </l-marker>
 
@@ -18,7 +19,7 @@
 
 <script>
 import {CRS} from 'leaflet';
-import {LMap, LImageOverlay, LMarker, LPopup} from 'vue2-leaflet';
+import {LMap, LImageOverlay, LMarker, LPopup, LIcon} from 'vue2-leaflet';
 
 export default {
   name: "planet-leaflet",
@@ -26,7 +27,8 @@ export default {
     LMap,
     LImageOverlay,
     LMarker,
-    LPopup
+    LPopup,
+    LIcon
   },
   data(){
     return {
@@ -47,12 +49,8 @@ export default {
         {name: "Uranus", lat:-150, lng: 780},
         {name: "Neptune", lat:-150, lng: 890},
       ],
-      mapx: null,
-      mapy: null
+      rocketIcon: "https://media.discordapp.net/attachments/318372572775317505/620399139032662063/rocket.png"
     }
-  },
-  mounted () {
-      this.$refs.myMap.mapObject.fitBounds(this.bounds);
   }
 }
 </script>
