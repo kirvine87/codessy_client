@@ -20,7 +20,7 @@ export default {
   props: ['quizes'],
   data() {
     return {
-      selected: null
+      selected: ""
     }
   },
   methods: {
