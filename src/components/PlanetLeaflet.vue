@@ -11,6 +11,7 @@
         </l-marker>
 
       </l-map>
+      <img id="rocket" src="../assets/rocket_on.png">
     </div>
   </div>
 </template>
@@ -74,5 +75,9 @@ h1{
     background-color:rgba(255,0,0,0.0);
     border-radius: 8px;
 
+}
+
+#rocket{
+  height: 5%;
 }
 </style>
