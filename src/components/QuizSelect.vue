@@ -26,7 +26,7 @@ export default {
   methods: {
 
   },
-  componets: {
+  components: {
     QuizForm
   }
 }
