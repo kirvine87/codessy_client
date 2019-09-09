@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="main">
-    <h1>Your Codessy Across Our Solar System</h1>
+    <h1>Your Codessy Across Our Solar System <img id="rocket" src="../assets/rocket_on.png" ></h1>
     <div id="mapid">
       <l-map ref="myMap" :minZoom="minZoom" :maxZoom="maxZoom" :max-bounds="maxBounds" :crs="crs">
 
@@ -11,7 +11,7 @@
         </l-marker>
 
       </l-map>
-      <img id="rocket" src="../assets/rocket_on.png">
+
     </div>
   </div>
 </template>
@@ -60,7 +60,10 @@ export default {
 <style lang="css" scoped>
 
 h1{
+  position: relative;
   margin-top: 0;
+  text-align: center;
+  top: -2%;
 }
 
 #mapid {
@@ -77,7 +80,11 @@ h1{
 
 }
 
-#rocket{
-  height: 5%;
+#rocket {
+  position: relative;
+  height: 60px;
+  top: 20px;
 }
+
+
 </style>
