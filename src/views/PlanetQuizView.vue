@@ -1,7 +1,9 @@
 <template lang="html">
   <div id="quiz-view">
-    <h1>Test your Solar System Knowledge</h1>
-    <!-- <PlanetSelect :quizes="quizes" /> -->
+    <h1>Test Your Solar System Knowledge</h1>
+    <div id="select-form">
+      <!-- <PlanetSelect :quizes="quizes" /> -->
+    </div>
   </div>
 </template>
 
@@ -32,4 +34,15 @@ export default {
 </script>
 
 <style lang="css" scoped>
+h1{
+  margin:0;
+}
+
+#quiz-view{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+
 </style>
