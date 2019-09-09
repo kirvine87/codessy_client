@@ -62,7 +62,7 @@ a{
 
 a:hover{
   background-color: rgba(126, 70, 154, 0.6);
-  text-transform: uppercase;
+  font-size: 1.8em;
 }
 
 </style>

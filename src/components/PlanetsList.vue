@@ -29,16 +29,19 @@ h3{
   font-size: 1.5em;
   font-weight: normal;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 h3:hover{
   background-color: rgba(126, 70, 154, 0.6);
   cursor:pointer;
-  text-transform: uppercase;
+  font-size: 1.8em;
 }
 
 a {
   text-decoration: none;
+  margin: 20px;
 }
 
 </style>
