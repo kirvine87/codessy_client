@@ -33,4 +33,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+select {
+  background-color: rgba(126, 70, 154, 0.6);
+  color: #FFFFFF;
+}
+
 </style>
