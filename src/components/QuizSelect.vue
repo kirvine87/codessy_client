@@ -6,15 +6,15 @@
         <option v-for="(quiz, index) in quizes">{{quiz.name}}</option>
       </select>
     </div>
-    <!-- <div class="form">
-      <QuizForm v-if="selected" :quiz="selected" />
-    </div> -->
+    <div class="form">
+      <QuizForm v-if="selected" />
+    </div>
 
   </div>
 </template>
 
 <script>
-// import QuizForm from '@/components/QuizForm';
+import QuizForm from '@/components/QuizForm';
 export default {
   name: 'quiz-select',
   props: ['quizes'],
@@ -25,6 +25,9 @@ export default {
   },
   methods: {
 
+  },
+  components: {
+    QuizForm
   }
 }
 </script>
