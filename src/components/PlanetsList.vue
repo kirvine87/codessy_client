@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="planet">
-    <h3 @click="handleSolarClick">Solar System</h3>
-    <h3 @click="handlePlanetClick(planet)" :key="index" v-for="(planet, index) in planets">{{planet.name}}</h3>
+    <router-link v-on:click.native="handleSolarClick" :to="{ name: 'planets-view'}"><h3>Solar System</h3></router-link>
+    <router-link v-on:click.native="handlePlanetClick(planet)" :to="{ name: 'planets-view'}" :key="index" v-for="(planet, index) in planets"><h3>{{planet.name}}</h3></router-link>
   </div>
 </template>
 
@@ -34,6 +34,10 @@ h3{
 h3:hover{
   background-color: rgba(255, 255, 255, 0.4);
   cursor:pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 </style>
