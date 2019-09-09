@@ -38,6 +38,7 @@ export default {
 #nav{
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid white;
 }
 
 h1, h6{
@@ -51,14 +52,15 @@ h6{
   margin-bottom: 5em;
 }
 
-h3, a{
+a{
   color: white;
   font-size: 1.5em;
   font-weight: normal;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 
-h3:hover, a:hover{
+a:hover{
   background-color: rgba(255, 255, 255, 0.4);
 }
 
