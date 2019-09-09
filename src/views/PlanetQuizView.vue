@@ -2,13 +2,13 @@
   <div id="quiz-view">
     <h1>Test Your Solar System Knowledge</h1>
     <div id="select-form">
-      <!-- <PlanetSelect :quizes="quizes" /> -->
+      <QuizSelect :quizes="quizes" />
     </div>
   </div>
 </template>
 
 <script>
-// import PlanetSelect from '@/components/PlanetSelect';
+import QuizSelect from '@/components/QuizSelect';
 
 export default {
   name: "planet-quiz-view",
@@ -28,7 +28,7 @@ export default {
     }
   },
   components: {
-    // PlanetSelect
+    QuizSelect
   }
 }
 </script>
