@@ -32,12 +32,14 @@
     </div>
 
 
-    <input type="submit">
+    <input type="submit" value="Check Answers!">
 
   </form>
 </template>
 
 <script>
+import {eventBus} from '@/main.js';
+
 export default {
   name: "quiz-form",
   props:["quiz"],
@@ -51,6 +53,17 @@ export default {
   methods:{
     handleQuizSubmit(e){
       e.preventDefault();
+
+      const selectedAnswers = {
+        answer1: this.answer1,
+        answer2: this.answer2,
+        answer3: this.answer3
+      }
+
+      eventBus.$emit('answers-selected', selectedAnswers)
+
+      this.answer1 = this.answer2 = this.answer3 = null;
+
 
 
     }
