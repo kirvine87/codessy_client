@@ -32,8 +32,9 @@ h3{
 }
 
 h3:hover{
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(126, 70, 154, 0.6);
   cursor:pointer;
+  text-transform: uppercase;
 }
 
 a {
