@@ -19,7 +19,7 @@ import QuizResult from '@/components/QuizResult'
 
 export default {
   name: 'quiz-select',
-  props: ['quizes'],
+  props: ['quizes', 'chosenQuiz'],
   data() {
     return {
       selected: "",
@@ -29,14 +29,19 @@ export default {
   methods: {
     handleSelect() {
       this.answers = this.selected.questions.map((question) => {
-      return question.answer
-    })
+        return question.answer
+      })
+    }
+  },
+  components: {
+    QuizForm,
+    QuizResult
+  },
+  watch: {
+    chosenQuiz: function (newValue) {
+      this.selected = newValue
+    }
   }
-},
-components: {
-  QuizForm,
-  QuizResult
-}
 }
 </script>
 

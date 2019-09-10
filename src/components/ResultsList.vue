@@ -3,23 +3,18 @@
     <div :key="index" v-for="(result, index) in results">
       <h3>{{result.name}}:</h3>
       <h3 v-if="result.result">{{result.result}}</h3>
-      <button v-if="!result.result" v-on:click="handleTakeQuizClick(quiz)">Take Quiz</button>
+      <router-link :to="{ name: 'planets-quiz-view', params: {planetName:result.name} }">
+        <button v-if="!result.result">Take Quiz</button>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 
-import {eventBus} from '@/main.js';
-
 export default {
   name: 'results-list',
-  props: ['results'],
-  methods: {
-    handleTakeQuizClick(quiz) {
-      eventBus.$emit('quiz-select', quiz)
-    }
-  }
+  props: ['results']
 }
 </script>
 

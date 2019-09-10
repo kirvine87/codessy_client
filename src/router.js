@@ -19,7 +19,8 @@ const router = new Router({
     {
       path: '/quiz',
       name: 'planets-quiz-view',
-      component: PlanetQuizView
+      component: PlanetQuizView,
+      props: true
     },
     {
       path: '/results',

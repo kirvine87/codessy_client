@@ -2,7 +2,7 @@
   <div id="quiz-view">
     <h1>Test Your Solar System Knowledge</h1>
     <div id="select-form">
-      <QuizSelect :quizes="quizes" />
+      <QuizSelect :quizes="quizes" :chosenQuiz="chosenQuiz" />
     </div>
   </div>
 </template>
@@ -12,20 +12,31 @@ import QuizSelect from '@/components/QuizSelect';
 
 export default {
   name: "planet-quiz-view",
+  props: ['planetName'],
   data(){
     return{
-      quizes: []
+      quizes: [],
+      chosenQuiz: {}
     }
   },
   mounted(){
     this.fetchQuizes();
+
   },
   methods: {
     fetchQuizes() {
       fetch("http://localhost:3000/api/quizes")
       .then(res => res.json())
       .then(quizes => this.quizes = quizes)
-    }
+      .then((quizes) => {if (this.planetName) {
+        quizes.forEach((quiz) => {
+          if(this.planetName === quiz.name) {
+            this.chosenQuiz = quiz;
+          };
+        })
+      }
+    })
+    },
   },
   components: {
     QuizSelect
