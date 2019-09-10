@@ -1,9 +1,7 @@
 <template lang="html">
-  <div id="quiz-answers">
-    <h1>Question</h1>
-    <ol>
-      <li v-for="answer of answers">{{answer}}</li>
-    </ol>
+  <div v-if="selectedAnswers" id="quiz-answers">
+    <h1>Question Answers:</h1>
+      <h3 v-for="answer of answers">{{answer}}</h3>
     <h2>Score: {{score}}</h2>
   </div>
 </template>
@@ -30,8 +28,8 @@ export default {
   methods: {
     counter() {
       let total = 0;
-      this.answers.forEach((a1) => this.selectedAnswers.forEach((a2) =>
-      {if(a1 === a2) {
+      this.answers.forEach((answer1) => this.selectedAnswers.forEach((answer2) =>
+      {if(answer1 === answer2) {
         total+=1
       }
     }
@@ -46,5 +44,15 @@ export default {
 <style lang="css" scoped>
   li {
     font-size: 1.5em;
+  }
+  #quiz-answers {
+    width: 50%;
+    height: 100%;
+    margin-top: 1em;
+    border: 2px dashed white;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  h1,h2,h3 {
+    text-align: center;
   }
 </style>

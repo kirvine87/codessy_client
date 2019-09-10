@@ -93,6 +93,7 @@ export default {
   padding: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
+  margin-right: 1em;
   border: 2px dashed white;
 }
 

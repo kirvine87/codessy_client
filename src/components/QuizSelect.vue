@@ -8,7 +8,7 @@
     </div>
     <div class="form">
       <QuizForm v-if="selected" :quiz="selected" />
-      <QuizResult :answers="answers"/>
+      <QuizResult v-if="selected" :answers="answers"/>
     </div>
   </div>
 </template>
@@ -59,5 +59,6 @@ select {
   display: flex;
   flex-direction: row;
 }
+
 
 </style>
