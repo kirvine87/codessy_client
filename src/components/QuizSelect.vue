@@ -1,34 +1,42 @@
 <template lang="html">
   <div>
     <div id="quiz-select">
-      <select v-model="selected">
+      <select v-model="selected" @change="handleSelect">
         <option disabled value="">Select a Quiz</option>
         <option v-for="(quiz, index) in quizes" :value="quiz">{{quiz.name}}</option>
       </select>
     </div>
     <div class="form">
       <QuizForm v-if="selected" :quiz="selected" />
+      <QuizResult v-if="selected" :answers="answers"/>
     </div>
   </div>
 </template>
 
 <script>
 import QuizForm from '@/components/QuizForm';
+import QuizResult from '@/components/QuizResult'
 
 export default {
   name: 'quiz-select',
   props: ['quizes'],
   data() {
     return {
-      selected: ""
+      selected: "",
+      answers: []
     }
   },
   methods: {
-
-  },
-  components: {
-    QuizForm
+    handleSelect() {
+      this.answers = this.selected.questions.map((question) => {
+      return question.answer
+    })
   }
+},
+components: {
+  QuizForm,
+  QuizResult
+}
 }
 </script>
 
@@ -46,5 +54,11 @@ select {
   justify-content: center;
   width: 50%;
 }
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
 
 </style>

@@ -5,7 +5,7 @@
       <label class="questionLine" for="question1">{{quiz.questions[0].question}}</label>
       <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[0].options" :key="optionIndex" >
         <label for="optionIndex">
-          <input class="optionLine" type="radio" name="question1" v-model="answer1" :value="option">
+          <input required class="optionLine" type="radio" name="question1" v-model="answer1" :value="option">
           {{option}}
         </label>
       </div>
@@ -15,7 +15,7 @@
       <label class="questionLine" for="question2">{{quiz.questions[1].question}}</label>
       <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[1].options" :key="optionIndex">
         <label for="optionIndex">
-          <input class="optionLine" type="radio" name="question2" v-model="answer2" :value="option">
+          <input required class="optionLine" type="radio" name="question2" v-model="answer2" :value="option">
           {{option}}
         </label>
       </div>
@@ -25,7 +25,7 @@
       <label class="questionLine" for="question3">{{quiz.questions[2].question}}</label>
       <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[2].options" :key="optionIndex">
         <label for="optionIndex">
-          <input class="optionLine" type="radio" name="question3" v-model="answer3" :value="option">
+          <input required class="optionLine" type="radio" name="question3" v-model="answer3" :value="option">
           {{option}}
         </label>
       </div>
@@ -54,17 +54,13 @@ export default {
     handleQuizSubmit(e){
       e.preventDefault();
 
-      const selectedAnswers = {
-        answer1: this.answer1,
-        answer2: this.answer2,
-        answer3: this.answer3
-      }
+      const selectedAnswers = [
+        this.answer1,
+        this.answer2,
+        this.answer3
+      ]
 
       eventBus.$emit('answers-selected', selectedAnswers)
-
-      this.answer1 = this.answer2 = this.answer3 = null;
-
-
 
     }
   },
@@ -97,6 +93,7 @@ export default {
   padding: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
+  margin-right: 1em;
   border: 2px dashed white;
 }
 
