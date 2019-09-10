@@ -47,20 +47,21 @@ export default {
     return {
       answer1: null,
       answer2: null,
-      answer3: null
+      answer3: null,
+      selectedAnswers: []
     }
   },
   methods:{
     handleQuizSubmit(e){
       e.preventDefault();
 
-      const selectedAnswers = [
+      this.selectedAnswers = [
         this.answer1,
         this.answer2,
         this.answer3
       ]
 
-      eventBus.$emit('answers-selected', selectedAnswers)
+      eventBus.$emit('answers-selected', this.selectedAnswers)
 
     }
   },
