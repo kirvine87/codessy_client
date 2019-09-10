@@ -8,7 +8,7 @@
     </div>
     <div class="form">
       <QuizForm v-if="selected" :quiz="selected" />
-      <QuizResult v-if="selected" :answers="answers"/>
+      <QuizResult v-if="selected" :answers="answers" :quizName="selected.name"/>
     </div>
   </div>
 </template>
