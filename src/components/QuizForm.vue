@@ -80,11 +80,11 @@ export default {
   flex-direction: column;
   background-color: rgba(126, 70, 154, 0.6);
   border: 1px solid black;
-  margin-right: 20px;
-  width: 88%;
-  border-radius: 10%;
+  margin-top: 20px;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-left: 16px;
+  width: 88%;
+  border-radius: 10px;
   padding-left: 20px;
   padding-bottom: 20px;
   padding-right: 20px;
@@ -93,7 +93,7 @@ export default {
 
 .quizContainner {
   background-color: rgba(255, 255, 255, 0.4);
-  width: 28%;
+  width: 50%;
   padding: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
