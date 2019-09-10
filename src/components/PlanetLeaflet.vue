@@ -49,7 +49,7 @@ export default {
         {name: "Uranus", lat:-150, lng: 780},
         {name: "Neptune", lat:-150, lng: 890},
       ],
-      rocketIcon: "https://media.discordapp.net/attachments/318372572775317505/620399139032662063/rocket.png"
+      rocketIcon: "https://media.discordapp.net/attachments/318372572775317505/620699363760406541/rocket-standing.png"
     }
   }
 }
