@@ -51,6 +51,11 @@ export default {
       selectedAnswers: []
     }
   },
+  watch: {
+    quiz: function (newValue) {
+      this.answer1 = this.answer2 = this.answer3 = null
+    }
+  },
   methods:{
     handleQuizSubmit(e){
       e.preventDefault();
