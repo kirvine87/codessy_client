@@ -39,7 +39,8 @@ export default {
   },
   watch: {
     chosenQuiz: function (newValue) {
-      this.selected = newValue
+      this.selected = newValue;
+      this.handleSelect();
     }
   }
 }
