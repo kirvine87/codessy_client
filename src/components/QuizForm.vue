@@ -1,7 +1,7 @@
 <template lang="html">
-  <form v-on:submit="handleQuizSubmit">
+  <form class="quizContainner" v-on:submit="handleQuizSubmit">
 
-    <div v-if="quiz.questions[0]" class="question1">
+    <div v-if="quiz.questions[0]" class="question">
       <label class="questionLine" for="question1">{{quiz.questions[0].question}}</label>
       <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[0].options" :key="optionIndex" >
         <label for="optionIndex">
@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div v-if="quiz.questions[1]" class="question2">
+    <div v-if="quiz.questions[1]" class="question">
       <label class="questionLine" for="question2">{{quiz.questions[1].question}}</label>
       <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[1].options" :key="optionIndex">
         <label for="optionIndex">
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div v-if="quiz.questions[2]" class="question3">
+    <div v-if="quiz.questions[2]" class="question">
       <label class="questionLine" for="question3">{{quiz.questions[2].question}}</label>
       <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[2].options" :key="optionIndex">
         <label for="optionIndex">
@@ -32,7 +32,7 @@
     </div>
 
 
-    <input type="submit" value="Check Answers!">
+    <input class="submitForm" type="submit" value="Check Answers!">
 
   </form>
 </template>
@@ -75,4 +75,47 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.question {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(126, 70, 154, 0.6);
+  border: 1px solid black;
+  margin-right: 20px;
+  width: 88%;
+  border-radius: 10%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  align-items: stretch;
+}
+
+.quizContainner {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 28%;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 2px dashed white;
+}
+
+.questionLine {
+  padding-top: 1em;
+  font-size: 1.2em;
+}
+
+.optionsList {
+  margin-top: 0.2em;
+}
+
+.submitForm {
+  display: flex;
+  background-color: rgba(126, 70, 154, 0.6);
+  color: white;
+  margin: auto;
+  font-size: 1.2em;
+  border-radius: 8px;
+}
+
 </style>
