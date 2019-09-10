@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:3000/api/results';
+const baseURL = 'http://localhost:3000/api/results/';
 
 export default {
   updateResult(payload, id){
