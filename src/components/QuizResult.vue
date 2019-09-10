@@ -23,7 +23,11 @@ export default {
       this.selectedAnswers = selectedAnswers
       this.counter()
     })
-
+  },
+  watch: {
+    answers: function (newValue) {
+      this.selectedAnswers = null;
+    }
   },
   methods: {
     counter() {
