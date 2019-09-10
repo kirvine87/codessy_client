@@ -2,7 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import PlanetsView from './views/PlanetsView';
-import PlanetQuizView from './views/PlanetQuizView'
+import PlanetQuizView from './views/PlanetQuizView';
+import ResultsView from './views/ResultsView';
 
 Vue.use(Router);
 
@@ -18,7 +19,13 @@ const router = new Router({
     {
       path: '/quiz',
       name: 'planets-quiz-view',
-      component: PlanetQuizView
+      component: PlanetQuizView,
+      props: true
+    },
+    {
+      path: '/results',
+      name: 'results-view',
+      component: ResultsView
     }
   ]
 });
