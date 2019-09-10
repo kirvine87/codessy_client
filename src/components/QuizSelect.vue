@@ -35,8 +35,16 @@ export default {
 <style lang="css" scoped>
 
 select {
+  margin-top: 1em;
   background-color: rgba(126, 70, 154, 0.6);
   color: #FFFFFF;
+  font-size: 1.2em;
+}
+
+#quiz-select {
+  display: flex;
+  justify-content: center;
+  width: 50%;
 }
 
 </style>
