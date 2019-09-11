@@ -6,6 +6,9 @@
       <router-link :to="{ name: 'planets-quiz-view', params: {planetName:result.name} }">
         <button v-if="!result.result">Take Quiz</button>
       </router-link>
+      <router-link :to="{ name: 'planets-quiz-view', params: {planetName:result.name} }">
+        <button v-if="result.result">Re-Take Quiz</button>
+      </router-link>
     </div>
   </div>
 </template>
