@@ -1,9 +1,15 @@
 <template lang="html">
-  <div v-if="selectedAnswers" id="quiz-answers">
+  <div  v-if="selectedAnswers" id="score-img">
+
     <h1>Question Answers:</h1>
-    <h3 v-for="answer of answers">{{answer}}</h3>
-    <h2>Score: {{score}}%</h2>
+    <div id="quiz-answers">
+
+      <h3 v-for="answer of answers">{{answer}}</h3>
+      <h2>Score: {{score}}%</h2>
+    </div>
+    <img v-if="score >= 60.00" src="https://media.discordapp.net/attachments/471000631700619284/621124455426686997/astronauthead3k.png" alt="female astronaut giving thumbs up">
   </div>
+
 </template>
 
 <script>
@@ -71,14 +77,29 @@ li {
   font-size: 1.5em;
 }
 #quiz-answers {
+  height: 40vh;
+  border: dashed white 2px;
+  width: 50%;
+  overflow: scroll;
+  margin: 0 auto;
+}
+
+h1,h2,h3 {
+  text-align: center;
+}
+
+#score-img{
+  display: flex;
+  flex-direction: column;
   width: 50%;
   height: 100%;
   margin-top: 1em;
   border: 2px dashed white;
   background-color: rgba(255, 255, 255, 0.4);
-  overflow: scroll;
 }
-h1,h2,h3 {
-  text-align: center;
+
+img{
+  height: 20vh;
+  object-fit:contain;
 }
 </style>
