@@ -156,7 +156,7 @@ export default {
 .quizContainner {
   background-color: rgba(255, 255, 255, 0.4);
   width: 50%;
-  height: 610px;
+  height: 65vh;
   padding: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
