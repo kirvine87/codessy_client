@@ -5,7 +5,7 @@
     <div id="nav">
       <router-link v-on:click.native="handleHomeClick" :to="{ name: 'planets-view'}">Home</router-link>
       <router-link :to="{ name: 'planets-quiz-view'}">Quiz</router-link>
-      <router-link :to="{ name: 'results-view'}">Results</router-link>
+      <!-- <router-link :to="{ name: 'results-view'}">Results</router-link> -->
     </div>
     <PlanetsList :planets="planets" />
   </div>

@@ -32,7 +32,7 @@ export default {
       this.selectedAnswers = selectedAnswers
 
       this.counter()
-
+//for the put request - sending two put request on changing view.
       fetch("http://localhost:3000/api/results")
       .then(res => res.json())
       .then(results => this.results = results)
