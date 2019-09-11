@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="quiz-view">
-    <h1>Test Your Solar System Knowledge</h1>
+    <h1>Test Your Solar System Knowledge <img id="rocket" src="../assets/rocket_on.png" ></h1>
     <div id="select-form">
       <QuizSelect :quizes="quizes" :chosenQuiz="chosenQuiz" />
     </div>
@@ -45,8 +45,12 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 h1{
-  margin:0;
+  position: relative;
+  margin-top: 0;
+  text-align: center;
+  top: -2%;
 }
 
 #quiz-view{
@@ -55,5 +59,10 @@ h1{
   height: 90vh;
 }
 
+#rocket {
+  position: relative;
+  height: 60px;
+  top: 20px;
+}
 
 </style>
