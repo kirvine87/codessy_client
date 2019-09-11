@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="results-view">
-    <h1>Your quiz results are: </h1>
+    <h1>Your Quiz Results! <img id="rocket" src="../assets/rocket_on.png" ></h1>
     <ResultsList :results="results" />
   </div>
 </template>
@@ -35,12 +35,19 @@ export default {
 
 <style lang="css" scoped>
 h1{
-  margin:0;
+  position: relative;
+  margin-top: 0;
+  text-align: center;
+  top: -2%;
 }
 
 #results-view{
   display: flex;
   flex-direction: column;
-  height: 90vh;
+}
+#rocket {
+  position: relative;
+  height: 60px;
+  top: 20px;
 }
 </style>
