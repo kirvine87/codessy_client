@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <img src="https://media.discordapp.net/attachments/471000631700619284/621124237943373824/astronaut-rectangle-flip.png" alt="female astronaut giving thumbs up">
+  <img v-if="totalAverage >= 60.00" src="https://media.discordapp.net/attachments/471000631700619284/621124237943373824/astronaut-rectangle-flip.png" alt="female astronaut giving thumbs up">
 </div>
 </template>
 
@@ -37,7 +37,6 @@ export default {
   props: ['results'],
   data(){
     return {
-      // totalAnswered:null
     }
   },
   computed: {
