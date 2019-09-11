@@ -31,6 +31,56 @@
       </div>
     </div>
 
+    <div v-if="quiz.questions[3]" class="question">
+      <label class="questionLine" for="question4">{{quiz.questions[3].question}}</label>
+      <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[3].options" :key="optionIndex">
+        <label for="optionIndex">
+          <input required class="optionLine" type="radio" name="question4" v-model="answer4" :value="option">
+          {{option}}
+        </label>
+      </div>
+    </div>
+
+    <div v-if="quiz.questions[4]" class="question">
+      <label class="questionLine" for="question5">{{quiz.questions[4].question}}</label>
+      <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[4].options" :key="optionIndex" >
+        <label for="optionIndex">
+          <input required class="optionLine" type="radio" name="question5" v-model="answer5" :value="option">
+          {{option}}
+        </label>
+      </div>
+    </div>
+
+    <div v-if="quiz.questions[5]" class="question">
+      <label class="questionLine" for="question6">{{quiz.questions[5].question}}</label>
+      <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[5].options" :key="optionIndex">
+        <label for="optionIndex">
+          <input required class="optionLine" type="radio" name="question6" v-model="answer6" :value="option">
+          {{option}}
+        </label>
+      </div>
+    </div>
+
+    <div v-if="quiz.questions[6]" class="question">
+      <label class="questionLine" for="question7">{{quiz.questions[6].question}}</label>
+      <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[6].options" :key="optionIndex">
+        <label for="optionIndex">
+          <input required class="optionLine" type="radio" name="question7" v-model="answer7" :value="option">
+          {{option}}
+        </label>
+      </div>
+    </div>
+
+    <div v-if="quiz.questions[7]" class="question">
+      <label class="questionLine" for="question8">{{quiz.questions[7].question}}</label>
+      <div class="optionsList" v-for="(option,optionIndex) in quiz.questions[7].options" :key="optionIndex">
+        <label for="optionIndex">
+          <input required class="optionLine" type="radio" name="question8" v-model="answer8" :value="option">
+          {{option}}
+        </label>
+      </div>
+    </div>
+
 
     <input class="submitForm" type="submit" value="Check Answers!">
 
@@ -48,12 +98,17 @@ export default {
       answer1: null,
       answer2: null,
       answer3: null,
+      answer4: null,
+      answer5: null,
+      answer6: null,
+      answer7: null,
+      answer8: null,
       selectedAnswers: []
     }
   },
   watch: {
     quiz: function (newValue) {
-      this.answer1 = this.answer2 = this.answer3 = null
+      this.answer1 = this.answer2 = this.answer3 = this.answer4 = this.answer5 = this.answer6 = this.answer7 = this.answer8 = null
     }
   },
   methods:{
@@ -63,7 +118,12 @@ export default {
       this.selectedAnswers = [
         this.answer1,
         this.answer2,
-        this.answer3
+        this.answer3,
+        this.answer4,
+        this.answer5,
+        this.answer6,
+        this.answer7,
+        this.answer8
       ]
 
       eventBus.$emit('answers-selected', this.selectedAnswers)
@@ -96,11 +156,13 @@ export default {
 .quizContainner {
   background-color: rgba(255, 255, 255, 0.4);
   width: 50%;
+  height: 610px;
   padding: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-right: 1em;
   border: 2px dashed white;
+  overflow: scroll;
 }
 
 .questionLine {

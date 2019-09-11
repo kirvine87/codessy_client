@@ -76,6 +76,7 @@ li {
   margin-top: 1em;
   border: 2px dashed white;
   background-color: rgba(255, 255, 255, 0.4);
+  overflow: scroll;
 }
 h1,h2,h3 {
   text-align: center;
