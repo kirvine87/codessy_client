@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="results">
-    <h2 v-if="totalAverage">Your Average So Far: {{totalAverage}}%</h2>
+    <h2 v-if="totalAverage >= 0.00">Your Average So Far: {{totalAverage}}%</h2>
     <div :key="index" v-for="(result, index) in results">
       <h3>{{result.name}}:</h3>
       <h3 v-if="result.result">You got {{result.result}}%!</h3>
@@ -26,16 +26,22 @@ export default {
   },
   computed: {
     totalAverage(){
-      let totalPerc = 0;
+      let totalPerc = 0.00;
       let totalAnswered = 0;
 
       this.results.forEach((result) => {
         if (result.result != null){
           totalAnswered++;
-          totalPerc += result.result;
+          totalPerc += parseFloat(result.result);
         };
       });
-      return totalPerc/totalAnswered;
+
+      let average = (totalPerc/totalAnswered).toFixed(2);
+      if (!average){
+        return 0
+      } else {
+        return average
+      }
     }
   }
 }
