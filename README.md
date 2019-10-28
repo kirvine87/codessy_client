@@ -10,8 +10,8 @@ taking the quiz of their choice whilst keeping track of their previous scores.
 
 ## Repo
 ```
-Client: https://github.com/kirvine87/js_project_client
-server: https://github.com/kirvine87/js_project_server
+[Client] (https://github.com/kirvine87/js_project_client)
+[Server] (https://github.com/kirvine87/js_project_server)
 ```
 
 ## Client
@@ -55,5 +55,3 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
